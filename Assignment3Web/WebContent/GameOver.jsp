@@ -12,8 +12,7 @@
 <p>Guessed your number <b>${sessionScope.guessNumber.lastGuess}</b> in 
 <b> ${sessionScope.guessNumber.guessCount}</b></p>
 
-<p>Click to <a href="${pageContext.request.contextPath}/guessnumber"
-		method="get">try again</a></p>
+<p>Click to <a href="${pageContext.request.contextPath}/guessnumber">try again</a></p>
 
 </body>
 </html>

@@ -88,6 +88,7 @@ public class FabioCiconiAddCourseServlet extends HttpServlet {
 	    String time = dateFormat.format(cal.getTime());
 	    request.getServletContext().setAttribute("lastUpdated", time);
 	    //
+	    //getServletContext().setAttribute("lastUpdated", time);
 	    
 	    reqDisp = request.getRequestDispatcher("/main.jsp");
 	    reqDisp.forward(request, response);

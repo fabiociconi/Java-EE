@@ -18,9 +18,7 @@
 
 
 	<p>Please indicate whether this guess is</p>
-	<form action="${pageContext.request.contextPath}/guessnumber"
-		method="post">
-		
+	<form action="${pageContext.request.contextPath}/guessnumber" method="post">
 <input type="submit" name="getAnswer" value="Correct" style="width: 80px;">
 <input type="submit" name="getAnswer" value="Too High" style="width: 80px;"> 
 or <input type="submit" name="getAnswer" value="Too Low" style="width: 80px;">
