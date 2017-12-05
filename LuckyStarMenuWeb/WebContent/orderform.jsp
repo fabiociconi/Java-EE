@@ -9,7 +9,7 @@
 <title>Lucky Star order Form</title>
 </head>
 <body>
-	<h2>Building the order: ${sessionScope.orderId }</h2>
+	<h2>Building the order: ${sessionScope.orderId}</h2>
 	<p>Please enter the quantity of each item you want to order, and
 		then click Order.</p>
 	<form action="${pageContext.request.contextPath}/processorder"

@@ -54,12 +54,7 @@ public class FabioCiconiLoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
 	    throws ServletException, IOException {
 
-	// sign off- go to login page
-	RequestDispatcher reqDisp = null;
-
-	reqDisp = request.getRequestDispatcher("/login.jsp");
-	reqDisp.forward(request, response);
-	return;
+	
     }
 
     /**

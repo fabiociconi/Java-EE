@@ -34,6 +34,7 @@ public class ProcessOrderServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+	    
 		MenuManager mm = MenuManager.getInstance();
 		Order order = new Order();
 		List<MenuItem> mis = mm.getMenu();

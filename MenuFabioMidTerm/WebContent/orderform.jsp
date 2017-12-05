@@ -10,10 +10,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Building the Order:</h1>
+	<h1>Building the Order : ${sessionScope.orderId} </h1>
 	Please enter the quantity of each item you want to order, and then
 	click Order.
-	<form action="${pageContext.request.contextPath}/processorder"
+	<form action="${pageContext.request.contextPath}/process"
 		method="post">
 		<table border=2>
 			<tr>
@@ -26,21 +26,22 @@
 				<tr>
 					<td>${item.itemNo}</td>
 					<td>${item.itemDesc}</td>
-					<td>${item.itemPrice} <!--apply currency format to field itemPrice of variable item -->
-						<%-- 						<fmt:formatNumber type="currency" ${item.itemPrice} </fmt:formatNumber> --%>
+					<td>
+					<fmt:formatNumber type="currency"> ${item.itemPrice} 
+					</fmt:formatNumber>
 					</td>
-					<td><select name="$item.itemNo">
-							<option value="0"></option>
-							<option value="1"></option>
-							<option value="2"></option>
-							<option value="3"></option>
-							<option value="4"></option>
-							<option value="5"></option>
-							<option value="6"></option>
-							<option value="7"></option>
-							<option value="8"></option>
-							<option value="9"></option>
-							<option value="10"></option>
+					<td><select name="${item.itemNo}">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
 					</select></td>
 				</tr>
 			</c:forEach>

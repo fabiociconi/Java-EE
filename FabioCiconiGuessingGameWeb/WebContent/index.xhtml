@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>NumberGuessingGame</h:head>
+<body>
+<h1>Try your Fabio Ciconi's guessing game </h1>
+<p>Pick a whole number between 0 and 1000. Enter a number of dollars to bet
+that I cannot find your number in 10 guesses or less</p>
+
+<p>Each time I make a guess, tell me whether I am correct, too high, too low. If
+ I haven't got your number after 10 guesses I will pay you ten times the amount\
+ of you bet. </p>
+ <p>Otherwise I keep your money </p>
+	
+	<h:form id="login">
+		<p>
+			Give your name:
+			<h:inputText id="player" value="#{gameBean.player}">
+				<f:validateLength minimum="1" />
+			</h:inputText>
+		</p>
+		<p>
+			Enter a bet in whole dollars:
+			<h:inputText id="bet" value="#{gameBean.bet}">
+				<f:validateLongRange minimum="1" maximum="100" />
+			</h:inputText>
+			to
+			<h:commandButton id="Start" value="Start"
+				actionListener="#{gameBean.start()}"
+				action="#{gameBean.getNextPage()}" />
+			playing.
+		</p>
+	</h:form>
+	<h:messages id="messages" style="color:red" />
+</body>
+</html>

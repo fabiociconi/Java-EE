@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>Game Guessing</h:head>
+<body> 
+<h1>Sorry XXXXX: yyyyy won </h1>
+<p>Guessed your number xxx in x tries.</p>
+<p>You lost <h:outputText value="#{gameBean.bet}">
+<f:convertNumber type="currency" currencySymbol="$" />
+</h:outputText> on this game.</p>
+<p>Please pay the total owing $xx.xx whe you are <h:commandButton id="correct" value="Done"
+		actionListener="#{gameBean.correct() }"
+		action="#{ gameBean.getNextPage() }" /></p>
+<p>or enter a new bet <input /> to <h:commandButton id="correct" value="Play Again"
+		actionListener="#{gameBean.correct() }"
+		action="#{ gameBean.getNextPage() }" /></p>
+ 
+
+
+</body> 
+</html>
