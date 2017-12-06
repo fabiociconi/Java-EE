@@ -12,14 +12,14 @@
 <f:convertNumber type="currency" currencySymbol="$" />
 </h:outputText> on this game.</p>
 <h:form id="over">
-<p>Please pay the total owing <h:outputLabel value="$#{gameBean.owing}" >
-<f:convertNumber type="currency" currencySymbol="$" /> </h:outputLabel> whe you are 
+<p>Please pay the total owing 
+<h:outputLabel value="#{gameBean.owing}">
+<f:convertNumber type="currency" currencySymbol="$" /> 
+</h:outputLabel> whe you are 
 <h:commandButton id="done" value="Done"
 		actionListener="#{gameBean.done() }"
 		action="#{ gameBean.getNextPage() }" /></p>
-<p>or enter a new bet <h:inputText id="bet" value="#{gameBean.bet}">
-				<f:convertNumber type="currency" currencySymbol="$" />
-				
+<p>or enter a new bet <h:inputText id="bet" value="#{gameBean.bet}">				
 			</h:inputText> to <h:commandButton id="plainAgain" value="Play Again"
 		actionListener="#{gameBean.start() }"
 		action="#{ gameBean.getNextPage() }" /></p>
