@@ -1,30 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"> 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
 
-<h:head><title>NumberGuessingGame</title></h:head>
-<body> 
-<h1>Sorry #{gameBean.player}: Fabio Ciconi won </h1>
-<p>Guessed your number #{gameBean.guess} in #{gameBean.count} tries.</p>
-<p>You lost <h:outputText value="#{gameBean.bet}">
-<f:convertNumber type="currency" currencySymbol="$" />
-</h:outputText> on this game.</p>
-<h:form id="over">
-<p>Please pay the total owing 
-<h:outputLabel value="#{gameBean.owing}">
-<f:convertNumber type="currency" currencySymbol="$" /> 
-</h:outputLabel> whe you are 
-<h:commandButton id="done" value="Done"
-		actionListener="#{gameBean.done() }"
-		action="#{ gameBean.getNextPage() }" /></p>
-<p>or enter a new bet <h:inputText id="bet" value="#{gameBean.bet}">				
-			</h:inputText> to <h:commandButton id="plainAgain" value="Play Again"
-		actionListener="#{gameBean.start() }"
-		action="#{ gameBean.getNextPage() }" /></p>
-</h:form>
+<h:head>
+	<title>NumberGuessingGame</title>
+</h:head>
+<body>
+	<h1>Sorry #{gameBean.player}: Fabio Ciconi won</h1>
+	<p>Guessed your number #{gameBean.guess} in #{gameBean.count}
+		tries.</p>
+	<p>
+		You lost
+		<h:outputText value="#{gameBean.bet}">
+			<f:convertNumber type="currency" currencySymbol="$" />
+		</h:outputText>
+		on this game.
+	</p>
+	<h:form id="over">
+		<p>
+			Please pay the total owing
+			<h:outputLabel value="#{gameBean.owing}">
+				<f:convertNumber type="currency" currencySymbol="$" />
+			</h:outputLabel>
+			whe you are
+			<h:commandButton id="done" value="Done"
+				actionListener="#{gameBean.done() }"
+				action="#{ gameBean.getNextPage() }" />
+		</p>
+		<p>
+			or enter a new bet
+			<h:inputText id="bet" value="#{gameBean.bet}">
+				<f:validateLongRange minimum="1" maximum="100" />
+			</h:inputText>
+			to
+			<h:commandButton id="plainAgain" value="Play Again"
+				actionListener="#{gameBean.start() }"
+				action="#{ gameBean.getNextPage() }" />
+		</p>
+	</h:form>
 	<h:messages id="messages" style="color:red" />
 
-</body> 
+</body>
 </html>

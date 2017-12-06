@@ -40,7 +40,7 @@ public class GameBean implements Serializable {
 	nextPage = "guessPage.xhtml";
 	guess = ng.firstGuess();
 	count = ng.getGuessCount();
-	
+
     }
 
     private void gameLost() {
@@ -56,20 +56,19 @@ public class GameBean implements Serializable {
      */
     public void done() {
 	setNextPage("index.xhtml");
-	//guess = 0 ;
-	//count = 0 ;
-	bet   = 0 ;
-	owing =	0 ;
+	// guess = 0 ;
+	// count = 0 ;
+	bet = 0;
+	owing = 0;
 
     }
-    
-    
+
     /**
      * 
      */
     public void tooHigh() {
 	try {
-	    //ng.guessLower();
+	    // ng.guessLower();
 	    guess = ng.guessLower();
 	    count = ng.getGuessCount();
 	} catch (GameLostException e) {
@@ -82,7 +81,7 @@ public class GameBean implements Serializable {
      */
     public void tooLow() {
 	try {
-	    //ng.guessHigher();
+	    // ng.guessHigher();
 	    guess = ng.guessHigher();
 	    count = ng.getGuessCount();
 	} catch (GameLostException e) {
@@ -95,7 +94,7 @@ public class GameBean implements Serializable {
      */
     public void correct() {
 	setNextPage("gameover.xhtml");
-	
+
     }
 
     /**
@@ -127,7 +126,7 @@ public class GameBean implements Serializable {
     public void setBet(int bet) {
 	owing = bet + owing;
 	this.bet = bet;
-	
+
     }
 
     /**
@@ -198,7 +197,8 @@ public class GameBean implements Serializable {
     }
 
     /**
-     * @param owing the owing to set
+     * @param owing
+     *            the owing to set
      */
     public void setOwing(int owing) {
 	this.owing = owing;

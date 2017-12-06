@@ -4,22 +4,24 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
 
-<h:head><title>NumberGuessingGame</title></h:head>
+<h:head>
+	<title>NumberGuessingGame</title>
+</h:head>
 <body>
-	<h1>Guess Number: #{gameBean.count} </h1>
+	<h1>Guess Number: #{gameBean.count}</h1>
 
 	<h2>Is your number #{gameBean.guess} ?</h2>
 	<p>Please tell whether this number is:</p>
-<h:form id="guess">
-	<h:commandButton id="correct" value="Correct"
-		actionListener="#{gameBean.correct() }"
-		action="#{ gameBean.getNextPage() }" />
-	<h:commandButton id="high" value="Too High"
-		actionListener="#{gameBean.tooHigh() }"
-		action="#{ gameBean.getNextPage() }" />
-	<h:commandButton id="low" value="Too Low"
-		actionListener="#{gameBean.tooLow() }"
-		action="#{ gameBean.getNextPage() }" />
-		</h:form>
+	<h:form id="guess">
+		<h:commandButton id="correct" value="Correct"
+			actionListener="#{gameBean.correct() }"
+			action="#{ gameBean.getNextPage() }" />
+		<h:commandButton id="high" value="Too High"
+			actionListener="#{gameBean.tooHigh() }"
+			action="#{ gameBean.getNextPage() }" />
+		<h:commandButton id="low" value="Too Low"
+			actionListener="#{gameBean.tooLow() }"
+			action="#{ gameBean.getNextPage() }" />
+	</h:form>
 </body>
 </html>
