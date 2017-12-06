@@ -4,12 +4,14 @@
 package binary.search.game.model;
 
 import java.io.Serializable;
+
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
 import binary.search.game.exception.ExcessGuessesException;
 import binary.search.game.exception.GameLostException;
-
 /**
  * @author ZeusAC
  *
@@ -17,7 +19,9 @@ import binary.search.game.exception.GameLostException;
 @Named(value = "gameBean")
 @SessionScoped
 public class GameBean implements Serializable {
+    
     private static final long serialVersionUID = 1L;
+    
     private NumberGuesser ng = null;
 
     public void start() throws GameLostException {
@@ -31,12 +35,12 @@ public class GameBean implements Serializable {
 	}
     }
    private void gameLost() {
-//	setNextPage("errorPage");
-//	FacesContext.getCurrentInstance().getExternalContext().
-//	invalidateSession();
-//	FacesMessage facesMessage = new FacesMessage(
-//	"Did you change your number mid-game … ? ");
-//	FacesContext.getCurrentInstance().addMessage("GameLost",
-//	facesMessage);
+	setNextPage("errorPage");
+	FacesContext.getCurrentInstance().getExternalContext().
+	invalidateSession();
+	FacesMessage facesMessage = new FacesMessage(
+	"Did you change your number mid-game … ? ");
+	FacesContext.getCurrentInstance().addMessage("GameLost",
+	facesMessage);
 	}
 }
