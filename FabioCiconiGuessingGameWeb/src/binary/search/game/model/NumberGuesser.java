@@ -2,6 +2,10 @@ package binary.search.game.model;
 
 import binary.search.game.exception.GameLostException;
 
+/**
+ * @author ZeusAC
+ *
+ */
 public class NumberGuesser {
 	// current status of this game
 	private int minValue = 0;
