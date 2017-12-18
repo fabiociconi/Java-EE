@@ -1,0 +1,31 @@
+package college.courses.exceptions;
+
+public class ImproperInputException extends Exception {
+	private static final long serialVersionUID = 1L;
+
+	public ImproperInputException() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public ImproperInputException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	public ImproperInputException(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public ImproperInputException(String message, Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public ImproperInputException(String message, Throwable cause,
+			boolean enableSuppression, boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+		// TODO Auto-generated constructor stub
+	}
+
+}
