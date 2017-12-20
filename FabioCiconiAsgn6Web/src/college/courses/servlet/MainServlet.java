@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import college.courses.data.Course;
 import college.courses.exceptions.CourseNotFoundException;
 import college.courses.exceptions.InvalidCommandException;
 import college.courses.model.CourseManager;
 import college.courses.model.ProfessorManager;
+import fabio.ciconi.asgn6.entities.Course;
 
 /**
  * Servlet implementation class MainServlet

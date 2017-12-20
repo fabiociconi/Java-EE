@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import college.courses.model.CourseManager;
+import fabio.ciconi.asgn6.entities.Course;
 
 /**
  * Servlet implementation class LoginServlet

@@ -2,18 +2,13 @@
 <persistence version="2.1"
 	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-	<!-- <persistence-unit name="FabioCiconiAsgn6Entities"> -->
-	<!-- </persistence-unit> -->
-
-	<persistence-unit name="FabioCiconiAsgn6Entities"
-		transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="HREntities">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<jta-data-source>java:/CollegeDS</jta-data-source>
-		<class>fabio.ciconi.asgn6.entities.Course</class>
-        <class>fabio.ciconi.asgn6.entities.Professor</class>
+		<jta-data-source>java:/HRDS</jta-data-source>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
-			<property name="jboss.entity.manager.factory.jndi.name"	value="java:/CollegeEMF" />
+			<property name="jboss.entity.manager.factory.jndi.name"
+				value="java:/HREMF" />
 		</properties>
 	</persistence-unit>
 </persistence>

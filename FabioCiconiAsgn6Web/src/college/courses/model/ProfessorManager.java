@@ -2,8 +2,8 @@ package college.courses.model;
 
 import java.util.List;
 
-import college.courses.data.Professor;
 import college.courses.exceptions.ProfessorNotFoundException;
+import fabio.ciconi.asgn6.entities.Professor;
 
 public class ProfessorManager extends CourseManager {
 

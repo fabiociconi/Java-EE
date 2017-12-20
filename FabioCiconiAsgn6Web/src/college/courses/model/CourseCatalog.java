@@ -1,9 +1,9 @@
 package college.courses.model;
 
-import college.courses.data.Course;
 import college.courses.exceptions.CourseNotFoundException;
 import college.courses.exceptions.DuplicateCourseException;
 import college.courses.exceptions.ImproperInputException;
+import fabio.ciconi.asgn6.entities.Course;
 
 public interface CourseCatalog {
 	

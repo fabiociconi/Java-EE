@@ -9,10 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import college.courses.data.Course;
 import college.courses.exceptions.DuplicateCourseException;
 import college.courses.exceptions.ImproperInputException;
 import college.courses.model.CourseManager;
+import fabio.ciconi.asgn6.entities.Course;
 
 /**
  * Servlet implementation class AddCourseServlet
