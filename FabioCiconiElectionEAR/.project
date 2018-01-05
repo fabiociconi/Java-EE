@@ -5,6 +5,7 @@
 	<projects>
 		<project>FabioCiconiElectionWeb</project>
 		<project>FabioCiconiElectionJPA</project>
+		<project>FabioCiconiElectionEJBs</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
