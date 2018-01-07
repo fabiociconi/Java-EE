@@ -9,7 +9,7 @@
 <body>
 
 <h3>Welcome to the online election web site.</h3>
-<p>To vote, enter your name and voter ID (password)). Then click <b>Sign In</b>.</p>
+<p>To vote, enter your name and voter ID (password). Then click <b>Sign In</b>.</p>
 <form method="post" action="${pageContext.request.contextPath}/signin">
 <font color="red">${requestScope.message}</font>
 <table border="0">

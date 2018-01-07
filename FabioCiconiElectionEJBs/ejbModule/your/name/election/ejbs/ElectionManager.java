@@ -7,7 +7,6 @@ import javax.annotation.Resource;
 import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -22,8 +21,9 @@ import your.name.execptions.ElectionException.ElectionException;
  */
 @Stateless
 public class ElectionManager implements ElectionManagerLocal {
-    @PersistenceContext (name="ElectionDS")
+    @PersistenceContext (name="FabioCiconiElectionEntities")
     private EntityManager em;
+    
     @Resource
     private SessionContext context;
     
@@ -45,6 +45,7 @@ public class ElectionManager implements ElectionManagerLocal {
 	}
 	// you could argue the next condition belongs in login servlet
 	if (voter.isVoted()) {
+	    context.setRollbackOnly();
 	    throw new ElectionException("Attempt to vote twice: " + voter);
 	}
 	return voter;

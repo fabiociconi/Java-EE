@@ -6,6 +6,10 @@ import javax.ejb.Local;
 
 import your.name.entities.Candidate;
 
+/**
+ * @author ZeusAC
+ *
+ */
 @Local
 public interface CandidateManagerLocal {
     /**
