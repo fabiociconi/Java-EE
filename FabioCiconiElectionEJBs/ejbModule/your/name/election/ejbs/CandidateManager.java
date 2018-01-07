@@ -18,6 +18,7 @@ import your.name.execptions.CandidateException.CandidateException;
 public class CandidateManager implements CandidateManagerLocal {
     @PersistenceContext (name="FabioCiconiElectionEntities")
     private EntityManager em;
+    
     public CandidateManager() {
   	super();
       }
@@ -43,7 +44,6 @@ public class CandidateManager implements CandidateManagerLocal {
       // returns candidate information used to generate buttons on the ballot form
 
       public List<Candidate> getCandidates() {
- 
   	TypedQuery<Candidate> tq = em.createNamedQuery("Candidate.findAll", Candidate.class);
   	List<Candidate> candidates = tq.getResultList();
   	return candidates;
