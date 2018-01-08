@@ -38,7 +38,7 @@ public class LoginServlet extends HttpServlet {
     }
 
     public void init() {
-	CandidateManager cm = new CandidateManager();
+	//CandidateManager cm = new CandidateManager();
 	List<Candidate> candidates = null;
 	candidates = cm.getCandidates();
 	getServletContext().setAttribute("candidates", candidates);
@@ -62,7 +62,7 @@ public class LoginServlet extends HttpServlet {
 		throw new ElectionException("Id and password are both required to login");
 	    }
 	    int vid = Integer.parseInt(voterId);
-	    ElectionManager electionManager = new ElectionManager();
+	    //ElectionManager electionManager = new ElectionManager();
 	    Voter voter = electionManager.authenticateVoter(vid, password);
 	    if (voter == null) {
 		throw new ElectionException("Voter [" + voterId + "] cannot be authenticated");
