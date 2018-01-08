@@ -16,6 +16,8 @@ import your.name.execptions.CandidateException.CandidateException;
  */
 @Stateless
 public class CandidateManager implements CandidateManagerLocal {
+   
+    
     @PersistenceContext (name="FabioCiconiElectionEntities")
     private EntityManager em;
     

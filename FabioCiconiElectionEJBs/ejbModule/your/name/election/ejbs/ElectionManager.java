@@ -45,7 +45,7 @@ public class ElectionManager implements ElectionManagerLocal {
 	}
 	// you could argue the next condition belongs in login servlet
 	if (voter.isVoted()) {
-	    context.setRollbackOnly();
+	   
 	    throw new ElectionException("Attempt to vote twice: " + voter);
 	}
 	return voter;
@@ -65,11 +65,10 @@ public class ElectionManager implements ElectionManagerLocal {
 	if (voter == null) {
 	    throw new ElectionException("Attempt to vote by unknown voter");
 	}
-	EntityTransaction et = em.getTransaction();
-	et.begin();
+	//EntityTransaction et = em.getTransaction();
+	//et.begin();
 	candidate.setVotes(candidate.getVotes() + 1);
 	if (voter.isVoted()) {
-	   // et.rollback();
 	    context.setRollbackOnly();
 	    throw new ElectionException("Attempt to vote twice: " + voter);
 	   
@@ -77,7 +76,7 @@ public class ElectionManager implements ElectionManagerLocal {
 	voter.setHasVoted(true);
 	em.merge(voter);
 	em.merge(candidate);
-	et.commit();
+	//et.commit();
     }
 
     // for testing and debugging only: print current vote count for each candidate

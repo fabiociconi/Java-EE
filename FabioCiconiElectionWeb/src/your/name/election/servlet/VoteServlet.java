@@ -49,7 +49,7 @@ public class VoteServlet extends HttpServlet {
 		throw new ElectionException("You must sign in before voting");
 	    }
 	    List<Candidate> lc = (List<Candidate>) getServletContext().getAttribute("candidates");
-	  //  ElectionManager electionManager = new ElectionManager();
+	    //ElectionManager electionManager = new ElectionManager();
 	    for (Candidate candidate : lc) {
 		if (request.getParameter(candidate.getCid()) != null) {
 		    electionManager.castBallot(voter, candidate);

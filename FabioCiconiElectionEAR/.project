@@ -3,9 +3,9 @@
 	<name>FabioCiconiElectionEAR</name>
 	<comment></comment>
 	<projects>
+		<project>FabioCiconiElectionEJBs</project>
 		<project>FabioCiconiElectionWeb</project>
 		<project>FabioCiconiElectionJPA</project>
-		<project>FabioCiconiElectionEJBs</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
